@@ -2,7 +2,7 @@
 
 ## Overview
 
-This mini project aims to predict whether the stock market will go up or down based on historical S&P 500 data using a Random Forest Classifier. The project involves data fetching, preprocessing, model training, prediction, and backtesting.
+This mini project focuses on predicting whether the stock market will go up or down based on historical S&P 500 data using a Random Forest Classifier. The project includes data fetching, preprocessing, model training, prediction, and backtesting. It now also incorporates additional features and enhancements to improve model accuracy.
 
 ## Files
 
@@ -17,7 +17,7 @@ This mini project aims to predict whether the stock market will go up or down ba
 2. **Data Preprocessing:**
    - The datetime index is reformatted to display only the date.
    - Unnecessary columns (Dividends, Stock Splits) are removed.
-   - A target variable ("Target") is created, indicating whether the stock will go up or down based on the closing prices.
+   - A target variable ("Target") is created, indicating whether the stock will go up or down based on closing prices.
 
 3. **Model Training:**
    - A RandomForestClassifier is initialized and trained on the training set.
@@ -28,8 +28,15 @@ This mini project aims to predict whether the stock market will go up or down ba
    - Predictions are made for each backtesting period using the trained model.
    - Precision scores are calculated for each backtesting period.
 
-5. **Results Visualization:**
-   - Predicted values and precision scores are visualized, and the count of predicted values for each class is displayed.
+5. **Enhancements:**
+   - Additional features are introduced for improved accuracy:
+     - Rolling averages for different time horizons.
+     - Ratios of close prices to rolling averages.
+     - Trends based on rolling sums of target values.
+
+6. **Results Visualization:**
+   - Predicted values and precision scores are visualized.
+   - Count of predicted values for each class is displayed.
 
 ## Usage
 
@@ -44,5 +51,5 @@ This mini project aims to predict whether the stock market will go up or down ba
 
 ## Improvements
 
-- Further hyperparameter tuning and feature engineering can be explored to enhance model accuracy.
-- Experiment with different machine learning algorithms for comparison.
+- Further hyperparameter tuning, feature engineering, and experimenting with different algorithms can be explored for continuous improvement.
+
